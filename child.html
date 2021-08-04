@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        window.child_callback = function () {
+            throw Error('does not overwrite the child_callback method');
+        }
+    </script>
+</head>
+<body>
+<h1>Child</h1>
+
+<script>
+    setTimeout(function (){
+        child_callback();
+    },200)
+</script>
+</body>
+</html>
